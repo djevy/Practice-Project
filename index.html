@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SOME API RELATED TITLE</title>
+    <title>AJAX/PHP/CURL/JSON Practice Project</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Darren Evans">
-    <meta name="description" content="API REALTED DESCRIPTION"> 
+    <meta name="description" content="AJAX/PHP/CURL/JSON Practice project for IT Career Switch"> 
 
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/style.css">
@@ -13,13 +13,67 @@
 </head>
 <body>
 
-    <p>hello world</p>
-
     <div class="header">
-
+        <h1>Geonames API App</h1>
     </div>
 
     <div class="main">
+
+        <div id="table">
+			<table>
+                <thead>
+                    <tr>
+                        <th>API name: </th>
+                        <th id="description">Api description</th>
+                        <td></td>
+                    </tr>
+                </thead>
+				
+                <tbody>
+                    <tr>
+                        <td >
+                            1. Timezones 
+                        </td>
+                        <td id="Timezones">
+                            
+                        </td>
+                        <td>
+                            <button id="btn1" type="submit">Submit</button>
+                        </td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td >
+                            2. Earthquakes 
+                        </td>
+                        <td id="Earthquakes">
+                            
+                        </td>
+                        <td>
+                            <button id="btn2" type="submit">Submit</button>
+                        </td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td >
+                            3. Weather 
+                        </td>
+                        <td id="Weather">
+                            
+                        </td>
+                        <td>
+                            <button id="btn3" type="submit">Submit</button>
+                        </td>
+    
+                    </tr>
+                </tbody>
+			</table>
+        </div>
+        <div id="Results">
+
+        </div>
 
     </div>
 
