@@ -3,7 +3,7 @@
     $executionStartTime = microtime(true) / 1000;
 
 
-    $url='api.geonames.org/timezone?formatted=true&' . $_REQUEST[''] . '&username=djevyd&style=full';
+    $url='api.geonames.org/timezone?formatted=true&' . $_REQUEST[''] . '&username=djevy&style=full';
 
     //CURL
     //1.Initalise a new cURL resource(ch= curl handle)
