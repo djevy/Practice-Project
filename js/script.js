@@ -42,7 +42,10 @@ $('#btn2').click(function() {
         type: 'POST',
         dataType: 'json',
         data: {
-            
+            north:44.1,
+            south:-9.9,
+            east:-22.4,
+            west:55.2
         },
         success: function(result) {
 
