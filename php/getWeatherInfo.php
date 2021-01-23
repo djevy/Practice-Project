@@ -3,7 +3,7 @@
     $executionStartTime = microtime(true) / 1000;
 
 
-    $url='api.geonames.org/weatherJSON?formatted=true&' . $_REQUEST[''] . '&username=djevy&style=full';
+    $url='api.geonames.org/weatherJSON?formatted=true&north=' . $_REQUEST['north'] . '&south=' . $_REQUEST['south'] . '&east=' . $_REQUEST['east'] . '&west=' . $_REQUEST['west'] . '&username=djevy&style=full';
 
     //CURL
     //1.Initalise a new cURL resource(ch= curl handle)
@@ -40,7 +40,7 @@
     //Show excution time:
     $output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
     //store the string of results in 'data':
-	$output['data'] = $decode[''];
+	$output['data'] = $decode['weatherObservations'];
 
 
 

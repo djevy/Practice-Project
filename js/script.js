@@ -14,7 +14,8 @@ $('#btn1').click(function() {
         type: 'POST',
         dataType: 'json',
         data: {
-            
+            lat: 47.01,
+            lng: 10.2
         },
         success: function(result) {
 
@@ -73,7 +74,10 @@ $('#btn3').click(function() {
         type: 'POST',
         dataType: 'json',
         data: {
-            
+            north:44.1,
+            south:-9.9,
+            east:-22.4,
+            west:55.2
         },
         success: function(result) {
 
