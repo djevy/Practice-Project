@@ -59,7 +59,6 @@ $('#btn2').click(function() {
                 $('#cell4').html(result['data'][0]['datetime']);
                 $('#cell5').html("Depth:");
                 $('#cell6').html(result['data'][0]['depth']);
-                
 
             }
         
@@ -78,10 +77,10 @@ $('#btn3').click(function() {
         type: 'POST',
         dataType: 'json',
         data: {
-            north:44.1,
-            south:-9.9,
-            east:-22.4,
-            west:55.2
+            north: $('#WeatherNorth').val(),
+            south: $('#WeatherSouth').val(),
+            east: $('#WeatherEast').val(),
+            west: $('#WeatherWest').val(),
         },
         success: function(result) {
 
@@ -89,9 +88,18 @@ $('#btn3').click(function() {
 
             if (result.status.name == "ok") {
 
-                $('#').html(result['data'][0]['']);
-                
-
+                $('#cell1').html("Station Name:");
+                $('#cell2').html(result['data'][0]['stationName']);
+                $('#cell3').html("Date and Time:");
+                $('#cell4').html(result['data'][0]['datetime']);
+                $('#cell5').html("Weather Condition:");
+                $('#cell6').html(result['data'][0]['weatherCondition']);
+                $('#cell7').html("Cloud Type:");
+                $('#cell8').html(result['data'][0]['clouds']);
+                $('#cell9').html("Temperature:");
+                $('#cell10').html(result['data'][0]['temperature']);
+                $('#cell11').html("Humidity:");
+                $('#cell12').html(result['data'][0]['humidity']);
             }
         
         },
@@ -101,5 +109,6 @@ $('#btn3').click(function() {
     }); 
 
 });
+
 
 
