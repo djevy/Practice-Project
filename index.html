@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AJAX/PHP/CURL/JSON Practice Project</title>
+    <title >AJAX/PHP/CURL/JSON Practice Project</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Darren Evans">
@@ -12,141 +12,155 @@
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-
-    <div class="header">
-        <h1>Geonames API App</h1>
-    </div>
-
-    <div class="main">
-
-        <div id="table">
-			<table>
-                <thead>
-                    <tr>
-                        <th>API name: </th>
-                        <th id="description">Api description</th>
-                        <td></td>
-                    </tr>
-                </thead>
-				
-                <tbody>
-                    <tr>
-                        <td >
-                            1. Timezones 
-                        </td>
-                        <td id="Timezones">
-                            
-                        </td>
-                        <td>
-                            <button id="btn1" type="submit">Submit</button>
-                        </td>
-    
-                    </tr>
-    
-                    <tr>
-                        <td >
-                            2. Earthquakes 
-                        </td>
-                        <td id="Earthquakes">
-                            <p>North:</p>
-                            <input type="number" id="QuakeNorth">
-                            <p>South:</p>
-                            <input type="number" id="QuakeSouth">
-                            <p>East:</p>
-                            <input type="number" id="QuakeEast">
-                            <p>West:</p>
-                            <input type="number" id="QuakeWest">
-                        </td>
-                        <td>
-                            <button id="btn2" type="submit">Submit</button>
-                        </td>
-    
-                    </tr>
-    
-                    <tr>
-                        <td >
-                            3. Weather 
-                        </td>
-                        <td id="Weather">
-                            <p>North:</p>
-                            <input type="number" id="WeatherNorth">
-                            <p>South:</p>
-                            <input type="number" id="WeatherSouth">
-                            <p>East:</p>
-                            <input type="number" id="WeatherEast">
-                            <p>West:</p>
-                            <input type="number" id="WeatherWest">
-                        </td>
-                        <td>
-                            <button id="btn3" type="submit">Submit</button>
-                        </td>
-    
-                    </tr>
-                </tbody>
-			</table>
-        </div>
-        <div id="Results">
-            <table>
-                <tbody id="ResultsBody">
-                    <tr>
-                        <td id="cell1">
-
-                        </td>
-                        <td id="cell2">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="cell3">
-
-                        </td>
-                        <td id="cell4">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="cell5">
-
-                        </td>
-                        <td id="cell6">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="cell7">
-
-                        </td>
-                        <td id="cell8">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="cell9">
-
-                        </td>
-                        <td id="cell10">
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="cell11">
-
-                        </td>
-                        <td id="cell12">
-
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4 bg-dark text-white px-2 py-2">Geonames API App</h1>
         </div>
 
+        <div class="main">
+
+            <div id="table">
+                <table class=" table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th>API name: </th>
+                            <th id="description">Api description and input:</th>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td >
+                                1. Timezones 
+                            </td>
+                            <td id="Timezones">
+                                <details>
+                                    <summary>Api Info</summary>
+                                    <p>Returns the timezone at the lat/lng with gmt offset (1. January) and dst offset (1. July)</p>
+                                </details>
+                            </td>
+                            <td>
+                                <button id="btn1" type="submit" class="btn btn-primary">Submit</button>
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+                            <td >
+                                2. Earthquakes 
+                            </td>
+                            <td id="Earthquakes">
+                                <details>
+                                    <summary>Api Info</summary>
+                                    <p>Returns a list of earthquakes, ordered by magnitude</p>
+                                    <p>Input 4 values:</p>
+                                </details>
+                                <p>North:</p>
+                                <input type="number" id="QuakeNorth" placeholder="North">
+                                <p>South:</p>
+                                <input type="number" id="QuakeSouth" placeholder="South">
+                                <p>East:</p>
+                                <input type="number" id="QuakeEast" placeholder="East">
+                                <p>West:</p>
+                                <input type="number" id="QuakeWest" placeholder="West">
+                            </td>
+                            <td>
+                                <button id="btn2" type="submit" class="btn btn-primary">Submit</button>
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+                            <td >
+                                3. Weather 
+                            </td>
+                            <td id="Weather">
+                                <details>
+                                    <summary>Api Info</summary>
+                                    <p>Returns a list of weather stations with the most recent weather observation.</p>
+                                    <p>Weather data is provided in the METAR (METeorological Aerodrome Report) format.</p>
+                                    <p>Input 4 values:</p>
+                                </details>
+                                <p>North:</p>
+                                <input type="number" id="WeatherNorth" placeholder="North">
+                                <p>South:</p>
+                                <input type="number" id="WeatherSouth" placeholder="South">
+                                <p>East:</p>
+                                <input type="number" id="WeatherEast" placeholder="East">
+                                <p>West:</p>
+                                <input type="number" id="WeatherWest" placeholder="West">
+                            </td>
+                            <td>
+                                <button id="btn3" type="submit" class="btn btn-primary">Submit</button>
+                            </td>
+        
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="Results">
+                <table class="table table-secondary">
+                    <tbody id="ResultsBody">
+                        <tr>
+                            <td id="cell1">
+
+                            </td>
+                            <td id="cell2">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="cell3">
+
+                            </td>
+                            <td id="cell4">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="cell5">
+
+                            </td>
+                            <td id="cell6">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="cell7">
+
+                            </td>
+                            <td id="cell8">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="cell9">
+
+                            </td>
+                            <td id="cell10">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="cell11">
+
+                            </td>
+                            <td id="cell12">
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div id="preloader">
+
+        </div>
     </div>
-
-    <div id="preloader">
-
-    </div>
-
     <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendors/jquery/jquery-2.2.3.min.js"></script>
     <script src="js/script.js"></script>
