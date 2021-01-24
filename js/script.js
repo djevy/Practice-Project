@@ -59,7 +59,12 @@ $('#btn2').click(function() {
                 $('#cell4').html(result['data'][0]['datetime']);
                 $('#cell5').html("Depth:");
                 $('#cell6').html(result['data'][0]['depth']);
-
+                $('#cell7').html("Magnitude:");
+                $('#cell8').html(result['data'][1]['magnitude']);
+                $('#cell9').html("Date and Time:");
+                $('#cell10').html(result['data'][1]['datetime']);
+                $('#cell11').html("Depth:");
+                $('#cell12').html(result['data'][1]['depth']);
             }
         
         },

@@ -2,8 +2,7 @@
 
     $executionStartTime = microtime(true) / 1000;
 
-
-    $url='api.geonames.org/timezone?formatted=true&' . $_REQUEST[''] . '&username=djevy&style=full';
+    $url='api.geonames.org/timezoneJSON?formatted=true&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=djevy&style=full';
 
     //CURL
     //1.Initalise a new cURL resource(ch= curl handle)
@@ -40,7 +39,7 @@
     //Show excution time:
     $output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
     //store the string of results in 'data':
-	$output['data'] = $decode[''];
+	$output['data'] = $decode['timezone'];
 
 
 
