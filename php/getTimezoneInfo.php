@@ -39,7 +39,7 @@
     //Show excution time:
     $output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
     //store the string of results in 'data':
-	$output['data'] = $decode['timezone'];
+	$output['data'] = $decode;
 
 
 
