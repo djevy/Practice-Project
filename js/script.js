@@ -14,17 +14,26 @@ $('#btn1').click(function() {
         type: 'POST',
         dataType: 'json',
         data: {
-            lat: 47.01,
-            lng: 10.2
+            lat: $('#Latitude').val(),
+            lng: $('#Longitude').val()
         },
         success: function(result) {
 
             console.log(result);
 
             if (result.status.name == "ok") {
-
-                $('#').html(result['data'][0]['']);
-                
+                $('#cell1').html('Country Name:');
+                $('#cell2').html(result['data']['countryName']);
+                $('#cell3').html("Continent:");
+                $('#cell4').html(result['data']['timezoneId']);
+                $('#cell5').html("Time:");
+                $('#cell6').html(result['data']['time']);
+                $('#cell7').html("Sunrise:");
+                $('#cell8').html(result['data']['sunrise']);
+                $('#cell9').html("Sunset:");
+                $('#cell10').html(result['data']['sunset']);
+                $('#cell11').html("Time offset from GMT:");
+                $('#cell12').html(result['data']['gmtOffset']);
 
             }
         
@@ -53,7 +62,7 @@ $('#btn2').click(function() {
             console.log(result);
 
             if (result.status.name == "ok") {
-                $('#cell1').html("Magnitude:");
+                $('#cell1').html('Magnitude:');
                 $('#cell2').html(result['data'][0]['magnitude']);
                 $('#cell3').html("Date and Time:");
                 $('#cell4').html(result['data'][0]['datetime']);
